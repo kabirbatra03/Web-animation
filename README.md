@@ -1,4 +1,4 @@
-# Webstream-animation
+# WebstreamApp-animation
 
 A smooth animation for webstream landing page using vanilla Js and Jquery
 
