@@ -32,8 +32,8 @@ body {
 .popcorn {
   z-index: 1;
   position: fixed;
-  /* top: 250px;
-  left: 50px; */
+  top: -250px;
+  left: 50px;
   width: 3.5vw;
   height: 3.5vw;
   background: linear-gradient(
@@ -102,7 +102,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.1;
+  opacity: 0.2;
   background-image: linear-gradient(to top, #434343 0%, black 80%);
   z-index: 2;
   cursor: pointer;
@@ -112,7 +112,7 @@ body {
   position: relative;
   font-family: 'Antic Slab', serif;
   text-shadow: 0 0 20px black;
-  font-size: 500%;
+  font-size: 65px;
   font-weight: bolder;
   text-align: center;
   z-index: 3;
