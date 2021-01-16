@@ -1,4 +1,4 @@
-# Web-animation
+# WebStream-animation
 
 A smooth animation for streaming websites using vanilla Js and Jquery
 
