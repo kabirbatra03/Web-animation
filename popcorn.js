@@ -30,7 +30,7 @@ class Popcorn {
       if (this.y > window.innerHeight - (bucketHeight + size)) {
         this.weight = 0;
         this.allDone = true;
-        $(`#${this.index}`).css('z-index', '-1');
+        $(`#${this.index}`).css('z-index', '0');
         $(`#${this.index}`).addClass('paused');
         $(window).on('resize', function () {
           this.x = 50 + Math.floor(Math.random() * (window.innerWidth - 155));
@@ -78,7 +78,7 @@ animate = () => {
 
 // for (let i = 0; i < 91; i++) {
 //   $(`#${i}`).draggable({
-//     cursor: 'grabbing',
+//
 //     start: (event, ui) => {},
 //     stop: (event, ui) => {},
 //   });

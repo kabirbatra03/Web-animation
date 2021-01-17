@@ -1,17 +1,12 @@
+* {
+  box-sizing: border-box;
+  cursor: pointer;
+}
 body {
   position: relative;
-  background: #16222a; /* fallback for old browsers */
-  background-image: -webkit-linear-gradient(
-    to right,
-    #3a6073,
-    #16222a
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background-image: linear-gradient(
-    to top,
-    #3a6073 0%,
-    #16222a 100%
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #16222a;
+  background-image: -webkit-linear-gradient(to right, #3a6073, #16222a);
+  background-image: linear-gradient(to top, #3a6073 0%, #16222a 100%);
   padding: 0 auto;
   margin: 0 auto;
   overflow: hidden;
@@ -22,18 +17,65 @@ body {
   height: 100vh;
 }
 .bucket {
-  z-index: 0;
+  z-index: 1;
   position: fixed;
   bottom: 0%;
   left: 35.35%;
   width: 30vw;
   height: 30vw;
 }
+canvas {
+  position: fixed;
+  bottom: 13.1vw;
+  left: 35vw;
+  height: 10vw;
+  width: 31vw;
+  z-index: 1;
+}
+#glasses {
+  position: fixed;
+  bottom: 11.1vw;
+  left: 30vw;
+  height: 10vw;
+  width: 42vw;
+  z-index: 1;
+  padding: 100px;
+}
+#red {
+  bottom: 4vw;
+  left: 7.5vw;
+
+  background-color: #c71f25;
+  border-radius: 5px;
+
+  border: 1px solid white;
+  opacity: 1;
+  position: absolute;
+  height: 6vw;
+  width: 9.5vw;
+  box-shadow: 0px 0px 30px 5px #d1333c;
+  animation: glow-red 3s ease-in;
+}
+#blue {
+  bottom: 4vw;
+  left: 23.55vw;
+
+  border: 1px solid white;
+  background-color: #27abe3;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px 5px #40bbe7;
+  opacity: 1;
+  position: absolute;
+  height: 6vw;
+  width: 9.5vw;
+  animation: glow-blue 3s ease-in;
+}
+
 .popcorn {
   z-index: 1;
   position: fixed;
-  /* top: 250px;
-  left: 50px; */
+  top: -150px;
+  left: 50px;
   width: 3.5vw;
   height: 3.5vw;
   background: linear-gradient(
@@ -48,6 +90,71 @@ body {
 .paused {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
+}
+
+@keyframes glow-red {
+  0% {
+    box-shadow: 0px 0px 30px 5px #d1333c;
+  }
+  10% {
+    box-shadow: 0 0 0 0 white;
+  }
+  20% {
+    box-shadow: 0px 0px 30px 5px #d1333c;
+  }
+  30% {
+    box-shadow: 0 0 0 0 white;
+  }
+  40% {
+    box-shadow: 0px 0px 30px 5px #d1333c;
+  }
+  50% {
+    box-shadow: 0px 0px 30px 5px #d1333c;
+  }
+  60% {
+    box-shadow: 0 0 0 0 white;
+  }
+  70% {
+    box-shadow: 0px 0px 30px 5px #d1333c;
+  }
+  80% {
+    box-shadow: 0 0 0 0 white;
+  }
+  100% {
+    box-shadow: 0px 0px 30px 5px #d1333c;
+  }
+}
+@keyframes glow-blue {
+  0% {
+    box-shadow: 0px 0px 30px 5px #40bbe7;
+  }
+  10% {
+    box-shadow: 0 0 0 0 white;
+  }
+  20% {
+    box-shadow: 0px 0px 30px 5px #40bbe7;
+  }
+  30% {
+    box-shadow: 0 0 0 0 white;
+  }
+  40% {
+    box-shadow: 0px 0px 30px 5px #40bbe7;
+  }
+  50% {
+    box-shadow: 0px 0px 30px 5px #40bbe7;
+  }
+  60% {
+    box-shadow: 0 0 0 0 white;
+  }
+  70% {
+    box-shadow: 0px 0px 30px 5px #40bbe7;
+  }
+  80% {
+    box-shadow: 0 0 0 0 white;
+  }
+  100% {
+    box-shadow: 0px 0px 30px 5px #40bbe7;
+  }
 }
 
 @keyframes spin {
@@ -102,10 +209,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.1;
+  opacity: 0.5;
   background-image: linear-gradient(to top, #434343 0%, black 80%);
-  z-index: 2;
-  cursor: pointer;
+  z-index: 0;
 }
 .tagline {
   color: white;
@@ -116,7 +222,6 @@ body {
   font-weight: bolder;
   text-align: center;
   z-index: 3;
-  margin: 2% 10%;
 }
 #join-now {
   color: white;

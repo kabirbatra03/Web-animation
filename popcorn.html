@@ -22,7 +22,7 @@
     <div class="main">
       <div id="overlay"></div>
       <h1 class="tagline">
-        What ya' watchin'?<br /><a href="" id="join-now">JOIN NOW</a>
+        What ya' watchin'?<br /><a href="#" id="join-now">JOIN NOW</a>
       </h1>
       <ul>
         <a href="#"
@@ -40,7 +40,13 @@
         ></a>
       </ul>
       <img src="assets/bucket.png" class="bucket" />
-
+      <canvas id="3dglass">
+        Your browser does not support the HTML canvas tag.
+      </canvas>
+      <div id="glasses">
+        <div id="red"></div>
+        <div id="blue"></div>
+      </div>
       <div class="popcorn" id="0"></div>
       <div class="popcorn" id="1"></div>
       <div class="popcorn" id="2"></div>
@@ -134,4 +140,5 @@
     </div>
   </body>
   <script src="popcorn.js"></script>
+  <script src="3dglass.js"></script>
 </html>
