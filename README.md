@@ -1,3 +1,6 @@
-# WebstreamApp-landingpage-animation
+# WebStream-animation
 
-A smooth animation for webstream landing page using vanilla Js and Jquery
+A smooth animation for streaming websites using vanilla Js and Jquery
+
+## Live Demo
+https://codepen.io/kabirbatra03/pen/abmPOwK
