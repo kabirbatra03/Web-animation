@@ -27,10 +27,3 @@ ctx.shadowBlur = 10;
 ctx.shadowColor = 'black';
 ctx.fill();
 ctx.stroke();
-
-$(document).ready(() => {
-  $('body').click(() => {
-    $('#red').toggleClass('glow-red');
-    $('#blue').toggleClass('glow-blue');
-  });
-});
